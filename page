@@ -1,0 +1,7 @@
+#!/bin/bash
+
+case $1 in
+  youtube) xdg-open https://youtube.com/;;
+  mp3) xdg-open https://free-mp3-download.net/;;
+  *) echo "That website is currently not on the list."
+esac
