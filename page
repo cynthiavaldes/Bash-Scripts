@@ -1,6 +1,7 @@
 #!/bin/bash
 
 case $1 in
+  list) echo "Current Website List: youtube, mp3, github";;
   youtube) xdg-open https://youtube.com/;;
   mp3) xdg-open https://free-mp3-download.net/;;
   github) xdg-open https://github.com/;;
