@@ -3,14 +3,14 @@
 Various bash scripts made to automate small tasks with the purpose of gaining more experience with bash to later use for bigger projects and automation tasks.
 
 ## List
-###page###  
+### page  
 Bash case script that takes command line argument $1 to direct user to websites placed in the case  
 **page list**  
 Prints the list of all current websites  
 **page "website name from list"**  
 Redirects user to chosen website from list on the default browser  
 
-###nemo###
+### nemo  
 Script that allows for easier note-taking and organization with computers text editor.  
 The script will create a directory named nemo under /home/Documents  
 **nemo "directory name" "note name"**  
