@@ -10,12 +10,18 @@ mkdir -p $HOME/Documents/nemo/$section;
 cd $HOME/Documents/nemo/$section;
 newdir=$HOME/Documents/nemo/$section
 
-if [ -f $newdir/$page ]
-then
-	xdg-open $page
-else
-	touch $page
-	xdg-open $page
-fi
 
+if [ "$page" = ls ]
+then
+	ls
+else
+
+	if [ -f $newdir/$page ]
+	then
+		xdg-open $page
+	else
+		touch $page
+		xdg-open $page
+	fi
+fi
 
