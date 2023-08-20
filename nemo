@@ -1,58 +1,26 @@
 #!/bin/bash
 
-#Creation of nemo folder or directory change
 mkdir -p $HOME/Documents/nemo;
 cd $HOME/Documents/nemo;
 
-case $1 in
-  on)
-  #nemo on dir note
-  mkdir -p $HOME/Documents/nemo/$2;
-  cd $HOME/Documents/nemo/$2;
-  ondir=$HOME/Documents/nemo/$2
+section=$1
+page=$2
 
-  if [ -f $ondir/$3 ]
-  then
-  	xdg-open $3
-  else
-	touch $3
-	xdg-open $3
-  fi;;
-  at)
-  #nemo at dir
-  mkdir -p $HOME/Documents/nemo/$2;
-  cd $HOME/Documents/nemo/$2;
-  indirname=$2
-  insidedir=true
-  echo "Inside directory $2";;
-  is)
-  #nemo is note
-  if $insidedir
-  then
-  	cd $HOME/Documents/nemo/$indirname;
-  	isdir=$HOME/Documents/nemo/$indirname
-  	if [ -f $isdir/$2 ]
-  	then
-  		xdg-open $2
-  	else
-		touch $2
-		xdg-open $2
-  	fi
-  else
-  	echo "Not inside any directory, please write nemo at directoryname to go to directory"
-  fi;;
-  look)
-  #nemo look
-  if $insidedir
-  then
-  	cd $HOME/Documents/nemo/$indirname;
-  	echo "Looking inside directory $indirname"
-  	ls $HOME/Documents/nemo/$indirname;
-  fi;;
-  out)
-  #nemo out
-  cd $HOME/Documents/nemo;
-  insidedir=false;;
-  *) echo "That's not on the list of commands, please write any of the following:
-  	   nemo on directory note, nemo at directory, nemo is note, nemo look, nemo out"
- esac
+mkdir -p $HOME/Documents/nemo/$section;
+cd $HOME/Documents/nemo/$section;
+newdir=$HOME/Documents/nemo/$section
+
+
+if [ "$page" = ls ]
+then
+	ls
+else
+
+	if [ -f $newdir/$page ]
+	then
+		xdg-open $page
+	else
+		touch $page
+		xdg-open $page
+	fi
+fi
