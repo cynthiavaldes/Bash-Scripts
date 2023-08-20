@@ -18,6 +18,7 @@ The script will create a directory named nemo under /home/Documents
 
 **nemo "directory name" "note name"**  
 Creates directory and note with name, if already created then script will go to the named directory and open the note  
+
 **nemo "directory name" ls**
 Executes the ls command under the chosen directory  
 
