@@ -5,6 +5,9 @@ case $1 in
   youtube) xdg-open https://youtube.com/;;
   mp3) xdg-open https://free-mp3-download.net/;;
   github) xdg-open https://github.com/;;
+<<<<<<< HEAD
   canvas) xdg-open https://fiu.instructure.com/;;
+=======
+>>>>>>> 782bf934b84b98ec52c86a2374f1277c64c83d0e
   *) echo "That website is currently not on the list."
 esac
