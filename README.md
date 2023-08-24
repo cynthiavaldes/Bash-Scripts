@@ -22,6 +22,6 @@ Creates directory and note with name, if already created then script will go to 
 **nemo "directory name" ls**  
 Executes the ls command under the chosen directory  
 
-**nemo ls**
+**nemo ls**  
 Executes the ls command under the nemo directory  
 
