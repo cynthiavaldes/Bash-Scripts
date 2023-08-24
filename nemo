@@ -4,7 +4,12 @@ mkdir -p $HOME/Documents/nemo;
 cd $HOME/Documents/nemo;
 
 section=$1
-page=$2
+
+if [ "$section" = ls ]
+then
+	ls
+else
+	page=$2
 
 mkdir -p $HOME/Documents/nemo/$section;
 cd $HOME/Documents/nemo/$section;
@@ -23,5 +28,6 @@ else
 		touch $page
 		xdg-open $page
 	fi
+fi
 fi
 
